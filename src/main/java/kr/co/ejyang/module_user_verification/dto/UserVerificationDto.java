@@ -24,17 +24,6 @@ public class UserVerificationDto {
     @Data
     @Builder
     @RequiredArgsConstructor
-    public static class Update {
-        @NotBlank(message = "알람 IDX(idx)가 누락되었습니다.")
-        public int idx;
-
-        @NotBlank(message = "회원 IDX(mb_idx)가 누락되었습니다.")
-        public int mbIdx;
-    }
-
-    @Data
-    @Builder
-    @RequiredArgsConstructor
     public static class Insert {
         @NotBlank(message = "회원 IDX(mb_idx)가 누락되었습니다.")
         public int mbIdx;

@@ -1,8 +1,12 @@
-package kr.co.ejyang.module_user_verification.service;
+package kr.co.ejyang.module_user_verification.mapper;
 
 import kr.co.ejyang.module_user_verification.dto.UserVerificationDto;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
-public interface UserVerificationService {
+@Mapper
+@Repository
+public interface UserVerificationMapper {
 
     /*******************************************************************************************
      * 인증 내역 조회 - IDX, MB_IDX
@@ -12,7 +16,7 @@ public interface UserVerificationService {
     /*******************************************************************************************
      * 인증 요청
      *******************************************************************************************/
-    void insertUserVerification(int mbIdx);
+    void insertUserVerification(UserVerificationDto.Insert dto);
 
     /*******************************************************************************************
      * 인증 완료
